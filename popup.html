@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Notes</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Quick Notes</h1>
+            <div class="header-buttons">
+                <button id="addClipboardBtn" class="add-btn clipboard-btn" title="Add note from clipboard">📋 Add</button>
+                <button id="addBtn" class="add-btn" title="Add new note manually">➕ Add</button>
+                <button id="settingsBtn" class="add-btn settings-btn" title="Settings">⚙️</button>
+            </div>
+        </header>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search notes and tags..." class="search-input">
+        </div>
+        
+        <div class="filter-container" id="filterContainer">
+            <div class="filter-chips" id="filterChips">
+                <!-- Filter chips will be dynamically inserted here -->
+            </div>
+        </div>
+        
+        <div class="notes-container" id="notesContainer">
+            <!-- Notes will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Settings Panel -->
+    <div id="settingsPanel" class="settings-panel">
+        <div class="settings-header">
+            <button id="backToNotesBtn" class="back-to-notes-btn">←</button>
+            <h2>Settings</h2>
+        </div>
+        
+        <div class="settings-content">
+            <div class="settings-section">
+                <h3>Note Behavior</h3>
+                
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <div class="setting-title">Default Secret Mode</div>
+                        <div class="setting-description">
+                            When enabled, new notes (including clipboard notes) will be marked as secret by default. 
+                            You can still change this for individual notes.
+                        </div>
+                    </div>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="defaultSecretToggle" class="toggle-input">
+                        <span class="toggle-slider"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Data Management</h3>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <div class="setting-title">Export Notes</div>
+                        <div class="setting-description">
+                            Download all your notes as a JSON file for backup or transfer.
+                        </div>
+                    </div>
+                    <button id="exportBtn" class="btn btn-secondary">Export</button>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <div class="setting-title">Import Notes</div>
+                        <div class="setting-description">
+                            Import notes from a previously exported JSON file.
+                        </div>
+                    </div>
+                    <button id="importBtn" class="btn btn-secondary">Import</button>
+                    <input type="file" id="importFile" accept=".json" style="display: none;">
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <div class="setting-title">Delete All Notes</div>
+                        <div class="setting-description">
+                            Permanently delete all notes. This action cannot be undone.
+                        </div>
+                    </div>
+                    <button id="deleteAllBtn" class="btn btn-danger">Delete All</button>
+                </div>
+            </div>
+            <div class="settings-section">
+                <h3>About</h3>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <div class="setting-title">Quick Notes</div>
+                        <div class="setting-description">
+                            Version 1.0.0 - A simple way to store and manage your text notes.
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <div class="setting-title">Copyright</div>
+                        <div class="setting-description">
+                            &copy; 2025 RequestRocket. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for adding/editing notes -->
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add New Note</h2>
+                <button id="closeModal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="noteContent">Note:</label>
+                    <textarea id="noteContent" placeholder="Enter your note" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="noteTags">Tags:</label>
+                    <div class="tags-dropdown-container">
+                        <div class="tags-input-wrapper">
+                            <input type="text" id="noteTags" placeholder="Type to search tags or create new ones..." class="tags-input">
+                            <div class="tags-dropdown" id="tagsDropdown">
+                                <!-- Dropdown options will appear here -->
+                            </div>
+                        </div>
+                        <div class="selected-tags" id="selectedTags">
+                            <!-- Selected tags will appear here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="toggle-label">
+                        <span class="toggle-text">Secret</span>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="isSecret" class="toggle-input">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                <button id="saveBtn" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

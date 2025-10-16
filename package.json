@@ -1,0 +1,23 @@
+{
+    "name": "edge-quicknotes",
+    "version": "1.0.0",
+    "description": "A Chromium extension for storing and copying text strings with secret option",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "dev": "tsc --watch"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0",
+        "@types/chrome": "^0.0.246"
+    },
+    "keywords": [
+        "chrome-extension",
+        "edge-extension",
+        "notes",
+        "text-storage"
+    ],
+    "author": "",
+    "license": "MIT"
+}
+
