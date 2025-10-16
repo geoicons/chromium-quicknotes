@@ -97,10 +97,11 @@ yarn install
 # Build the extension
 yarn build
 
-### File Structure
-
 ```
 
+### File Structure
+
+```bash
 chromium-quicknotes/
 ├── manifest.json # Extension manifest
 ├── popup.html # Main popup interface
@@ -111,7 +112,6 @@ chromium-quicknotes/
 ├── icons/ # Extension icons
 ├── helper/ # Helper scripts for icon resizing
 └── package.json # Dependencies and scripts
-
 ```
 
 ## Permissions
@@ -128,4 +128,7 @@ No network permissions are required - all data is stored locally on your device.
 -   No data is sent to external servers
 -   No tracking or analytics
 -   Your notes remain private and secure
+
+```
+
 ```
