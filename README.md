@@ -1,6 +1,8 @@
-# Quick Notes - Edge Extension
+# Chromium Quick Notes
 
-A Chromium extension for Microsoft Edge that allows you to store, manage, and quickly copy text strings with a secret option for sensitive content.
+Copyright © 2024 RequestRocket. All rights reserved.
+
+A Chromium extension for Microsoft Edge and Google Chrome that allows you to store, manage, and quickly copy text strings with a secret option for sensitive content.
 
 ## Features
 
@@ -24,7 +26,7 @@ A Chromium extension for Microsoft Edge that allows you to store, manage, and qu
 2. **Load the Extension:**
 
     - Click "Load unpacked" button
-    - Navigate to this project folder (`edge-quicknotes`)
+    - Navigate to this project folder (`chromium-quicknotes`)
     - Select the folder and click "Select Folder"
 
 3. **Pin the Extension:**
@@ -42,7 +44,7 @@ A Chromium extension for Microsoft Edge that allows you to store, manage, and qu
 2. **Load the Extension:**
 
     - Click "Load unpacked" button
-    - Navigate to this project folder (`edge-quicknotes`)
+    - Navigate to this project folder (`chromium-quicknotes`)
     - Select the folder and click "Select Folder"
 
 3. **Pin the Extension:**
@@ -67,9 +69,17 @@ A Chromium extension for Microsoft Edge that allows you to store, manage, and qu
     - Click "Delete" to remove a note
 
 3. **Secret Notes:**
+
     - Secret notes show "••••••••" instead of the actual content
     - The "SECRET" indicator appears in the note metadata
     - You can still copy the actual content by clicking the "Copy" button
+
+4. **Settings:**
+
+    - Access settings by clicking the gear icon in the extension popup
+    - Configure default note behavior
+    - Export notes
+    - Import and overwite notes
 
 ## Development
 
@@ -87,22 +97,21 @@ yarn install
 # Build the extension
 yarn build
 
-# Watch for changes during development
-yarn watch
-```
-
 ### File Structure
 
 ```
-edge-quicknotes/
-├── manifest.json          # Extension manifest
-├── popup.html            # Main popup interface
-├── popup.css             # Styling
-├── popup.js              # Compiled JavaScript (from TypeScript)
+
+chromium-quicknotes/
+├── manifest.json # Extension manifest
+├── popup.html # Main popup interface
+├── popup.css # Styling
+├── popup.js # Compiled JavaScript (from TypeScript)
 ├── src/
-│   └── popup.ts          # TypeScript source
-├── icons/                # Extension icons (placeholder)
-└── package.json          # Dependencies and scripts
+│ └── popup.ts # TypeScript source
+├── icons/ # Extension icons
+├── helper/ # Helper scripts for icon resizing
+└── package.json # Dependencies and scripts
+
 ```
 
 ## Permissions
@@ -119,4 +128,4 @@ No network permissions are required - all data is stored locally on your device.
 -   No data is sent to external servers
 -   No tracking or analytics
 -   Your notes remain private and secure
-
+```
