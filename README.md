@@ -4,6 +4,8 @@ Copyright © 2024 RequestRocket. All rights reserved.
 
 A Chromium extension for Microsoft Edge and Google Chrome that allows you to store, manage, and quickly copy text strings with a secret option for sensitive content.
 
+<img width="408" height="611" alt="image" src="https://github.com/user-attachments/assets/a728aa02-9125-4a82-9edc-5134d93bdb14" />
+
 ## Features
 
 -   ✅ Create, edit, and delete text notes
