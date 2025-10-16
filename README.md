@@ -128,7 +128,3 @@ No network permissions are required - all data is stored locally on your device.
 -   No data is sent to external servers
 -   No tracking or analytics
 -   Your notes remain private and secure
-
-```
-
-```
