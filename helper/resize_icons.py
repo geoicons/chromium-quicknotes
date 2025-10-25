@@ -12,7 +12,7 @@ def resize_icons():
     """Resize the source image to all required icon sizes."""
     
     # Source image path
-    source_image = "../icons/web-app-manifest-512x512.png"
+    source_image = "../icons/quicknotesCheetah.png"
     
     # Required icon sizes
     icon_sizes = [
@@ -25,7 +25,7 @@ def resize_icons():
     # Check if source image exists
     if not os.path.exists(source_image):
         print(f"Error: Source image not found at {source_image}")
-        print("Please make sure web-app-manifest-512x512.png exists in the icons/ directory")
+        print("Please make sure the file exists in the icons/ directory")
         return False
     
     try:
